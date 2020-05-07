@@ -23,6 +23,8 @@ class HelloWorldGreeter extends Greeter{
 const hello = new HelloWorldGreeter();
 console.log(hello.greet()); // Hello World!
 
+//#region Tricks in js class
+
 // Access private? Yes you can.
 // console.log(hello.greeting);
 console.log(hello['greeting']); // 'World'
@@ -37,3 +39,5 @@ function holyGreet() {
   return `Holy ${this.greeting}`;
 }
 console.log(holyGreet.call(hello)) // Holy World!
+
+//#endregion

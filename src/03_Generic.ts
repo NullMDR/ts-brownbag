@@ -1,5 +1,6 @@
 // Generic is the way to advanced
 
+//#region Implementation of getHashMap()
 const getHashMap = <TKey, TVal>(hashFn: (key: TKey) => string) => {
   const data: {
     [hashKey: string]: TVal
@@ -10,6 +11,7 @@ const getHashMap = <TKey, TVal>(hashFn: (key: TKey) => string) => {
     set: (key: TKey, val: TVal) => { data[hashFn(key)] = val }
   };
 }
+//#endregion
 
 const identityMap = getHashMap<number, string>(
   key => key.toString()

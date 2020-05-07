@@ -1,3 +1,4 @@
+//#region Implementation of padLeft()
 // Is that variable a number?
 function isNumber(x: any): x is number {
   return typeof x === "number";
@@ -21,10 +22,12 @@ function padLeft(value: string, padding: string | number) {
 
   return result;
 }
+//#endregion
 
 padLeft("A", "B"); // 'BA'
 padLeft("A", 2); // '  A'
 
+//#region Discriminator field in flow analysis
 // Fish can't fly. Typescript knows that.
 type Fish = {
   discriminator: 'fish',
@@ -55,3 +58,4 @@ const action = (animal: Fish | Bird) => {
       break;
   }
 }
+//#endregion

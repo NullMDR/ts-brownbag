@@ -8,7 +8,7 @@ const actionTable = {
 actionTable.addOne(2); // 3
 actionTable.getPets('Dog'); // ['Cat', 'Dog]
 
-// Write a generic 'performAction'
+//#region Implementation of a generic performAction()
 type ActionKey = keyof typeof actionTable; // 'getPets' | 'addOne'
 
 type PartActionKey = Exclude<ActionKey, 'getPets'>; // 'addOne'
@@ -19,11 +19,12 @@ const performAction = <TAction extends ActionKey>(
 ): ReturnType<(typeof actionTable)[TAction]> => {
   return actionTable[actionKey].apply(undefined, args);
 }
+//#endregion
 
 performAction('addOne', 2); // 3
 performAction('getPets', 'Dog'); // ['Cat', 'Dog']
 
-// Write high level function with correct types
+//#region Write high level function with correct types
 type ActionData = {
   [key in ActionKey]: Parameters<(typeof actionTable)[key]>
 }
@@ -43,3 +44,4 @@ const { addOne, getPets } = getActionResult({
   addOne: [2],
   getPets: ['Dog']
 });
+//#endregion

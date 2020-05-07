@@ -11,6 +11,9 @@ const helloFunc2 = (a: number, b: number): number => {
   return a + b;
 };
 
+// helloFunc("this is string");
+// helloFunc(1, 2).concat([]);
+
 interface Phone {
   call: (number: string) => void;
 }

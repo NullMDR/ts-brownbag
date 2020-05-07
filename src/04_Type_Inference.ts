@@ -27,7 +27,7 @@ const someAsyncFn = async () => {
   console.log(result);
 }
 
-// Let's infer type from input argument!
+//#region Let's infer type from input argument!
 type GetArgType<Fn> = Fn extends (input: infer Input, ...args: any) => any
   ? Input
   : never;
@@ -46,6 +46,7 @@ const smartPromisify = <
   (input: Input) => new Promise<Output>(resolve => {
     fn(input, ((output: Output) => resolve(output)));
   })
+//#endregion
 
 const smartIdentityAsync = smartPromisify(identityWithCb);
 
