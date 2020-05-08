@@ -2,7 +2,7 @@
 
 ## Link to official docs
 
-[https://www.typescriptlang.org/docs/handbook/basic-types.html](https://www.typescriptlang.org/docs/handbook/basic-types.html)
+[https://www.typescriptlang.org/v2/docs/home](https://www.typescriptlang.org/v2/docs/home)
 
 ## Setup
 
