@@ -14,3 +14,4 @@ console.log(hello2['message']); // undefined
 // Closure works well in function
 const greet2 = hello2.greet;
 console.log(greet2()); // Hello World!
+//# sourceMappingURL=02_1_No_OO.js.map

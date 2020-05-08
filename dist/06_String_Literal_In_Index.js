@@ -8,6 +8,7 @@ actionTable.getPets('Dog'); // ['Cat', 'Dog]
 const performAction = (actionKey, ...args) => {
     return actionTable[actionKey].apply(undefined, args);
 };
+//#endregion
 performAction('addOne', 2); // 3
 performAction('getPets', 'Dog'); // ['Cat', 'Dog']
 const getActionResult = (data) => {
@@ -21,3 +22,5 @@ const { addOne, getPets } = getActionResult({
     addOne: [2],
     getPets: ['Dog']
 });
+//#endregion
+//# sourceMappingURL=06_String_Literal_In_Index.js.map

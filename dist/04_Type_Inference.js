@@ -31,3 +31,4 @@ const smartPromisify = (fn) => (input) => new Promise(resolve => {
 });
 //#endregion
 const smartIdentityAsync = smartPromisify(identityWithCb);
+//# sourceMappingURL=04_Type_Inference.js.map

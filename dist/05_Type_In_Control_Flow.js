@@ -40,3 +40,8 @@ const action = (animal) => {
     }
 };
 //#endregion
+action({
+    discriminator: 'bird',
+    fly: () => { }
+});
+//# sourceMappingURL=05_Type_In_Control_Flow.js.map

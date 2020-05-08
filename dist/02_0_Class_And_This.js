@@ -21,7 +21,7 @@ console.log(hello.greet()); // Hello World!
 console.log(hello['greeting']); // 'World'
 // The problem of "bind this"
 const greet = hello.greet;
-console.log(greet()); // Hello, undefined
+// console.log(greet()); // Error!
 console.log(greet.call(hello)); // Hello, World!
 // old-school function
 function holyGreet() {
@@ -29,3 +29,4 @@ function holyGreet() {
 }
 console.log(holyGreet.call(hello)); // Holy World!
 //#endregion
+//# sourceMappingURL=02_0_Class_And_This.js.map

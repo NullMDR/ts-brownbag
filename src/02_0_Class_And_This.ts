@@ -31,7 +31,7 @@ console.log(hello['greeting']); // 'World'
 
 // The problem of "bind this"
 const greet: () => string = hello.greet;
-console.log(greet()); // Hello, undefined
+// console.log(greet()); // Error!
 console.log(greet.call(hello)); // Hello, World!
 
 // old-school function

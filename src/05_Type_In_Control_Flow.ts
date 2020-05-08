@@ -59,3 +59,8 @@ const action = (animal: Fish | Bird) => {
   }
 }
 //#endregion
+
+action({
+  discriminator: 'bird',
+  fly: () => {}
+});
